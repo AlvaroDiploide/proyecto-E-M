@@ -38,25 +38,27 @@
 </head>
 
 <body class="text-center">
-     <form action="home.html" class="formulario" >
+  <form action="home.html" >
       <div id="sección">
-          <img class="elLogo" src="img/login.png" >
+          <img src="img/login.png" >
 
             <h1 class="register">¡Por favor, regístrese!</h1>
             <div class="subSección">
-            <input type="email" placeholder="Ingresar email" required autofocus=""><br>
-            <input type="password"  placeholder="Ingresar contraseña" required> <br>
+            <input id="correo" type="email" placeholder="Ingresar email" required autofocus=""><br>
+            <input id="contraseña" type="password"  placeholder="Ingresar contraseña" required> <br>
             <label>
-              <input type="checkbox" value="Recuérdame"> Recuérdame
+              <input type="checkbox"  value="Recuérdame" > Recuérdame
            </label> <br>
 
-           <button class="btn btn-lg btn-primary " type="submit" >Ingresar</button> 
+           <button id="entrar" class="btn btn-lg btn-primary " type="submit" >Ingresar</button> 
 
            <p class="mt-5 mb-3 text-muted">© 2021</p>
           </div>
          </div>
-     </form> 
-     
+    </form>
+    <script>
+      sessionStorage.getItem("correo");
+    </script>
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
 </body>
