@@ -38,14 +38,14 @@ function sortCategories(criteria, array) {
     return result;
 }
 
-function showCategoriesList(array) {
+function showCategoriesList() {
 
     let productsPages = " ";
-    for (let i = 0; i < array.length; i++) {
-        let category = array[i];
+    for (let i = 0; i < categoriasProductos.length; i++) {
+        let category = categoriasProductos[i];
 
-        if (((minCount == undefined) || (minCount != undefined && parseInt(category.soldCount) >= minCount)) &&
-            ((maxCount == undefined) || (maxCount != undefined && parseInt(category.soldCount) <= maxCount))) {
+        if (((minCount == undefined) || (minCount != undefined && parseInt(category.cost) >= minCount)) &&
+            ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))) {
 
         productsPages +=
          `<div class="ist-group-item list-group-item-action">
@@ -56,9 +56,10 @@ function showCategoriesList(array) {
          <div class="col">
          <div class="d-flex w-100 justify-content-between">
          <h4 class="mb-1">`+ category.name + `</h4>
-         <small class="text-muted">` + category.currency + category.cost + ` </small>
+         <small class="text-muted">` + category.soldCount + ` articulos </small>
            </div>
            <p>` + category.description + `</p>
+           <p> ${category.currency } ${ category.cost } </p>
            </div>
            </div>
            </div>`
@@ -78,7 +79,7 @@ function sortAndShowCategories(sortCriteria, categoriesArray) {
      categoriasProductos = sortCategories(currentSortCriteria,  categoriasProductos);
 
     //Muestro las categorías ordenadas
-    showCategoriesList(array);
+    showCategoriesList();
 }
 
 document.addEventListener("DOMContentLoaded", function (e) {
