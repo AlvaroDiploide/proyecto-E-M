@@ -156,6 +156,7 @@ img{
   background-color:white
 }
 
+
 /**** estilos para el filtro de búsqueda de productos******/
 
 .cars {
@@ -172,6 +173,8 @@ img{
 .cambio {
   font-size: 1.25rem;
     font-weight: 300;
+    background-color:rgb(252, 246, 246);
+    color: black
 }
 .filtro {
   text-align: right!important; 

@@ -2,8 +2,8 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 
-const ORDER_ASC_BY_NAME = "precioA";
-const ORDER_DESC_BY_NAME = "precioD";
+const ORDER_ASC_BY_PRICE = "precioA";
+const ORDER_DESC_BY_PRICE = "precioD";
 const ORDER_BY_PROD_COUNT = "Relevancia";
 var categoriasProductos = [];
 var currentSortCriteria = undefined;
@@ -12,13 +12,13 @@ var maxCount = undefined;
 
 function sortCategories(criteria, array) {
     let result = [];
-    if (criteria === ORDER_ASC_BY_NAME) {
+    if (criteria === ORDER_ASC_BY_PRICE) {
         result = array.sort(function (a, b) {
             if (a.cost < b.cost) { return -1; }
             if (a.cost > b.cost) { return 1; }
             return 0;
         });
-    } else if (criteria === ORDER_DESC_BY_NAME) {
+    } else if (criteria === ORDER_DESC_BY_PRICE) {
         result = array.sort(function (a, b) {
             if (a.cost > b.cost) { return -1; }
             if (a.cost < b.cost) { return 1; }
@@ -59,7 +59,7 @@ function showCategoriesList() {
          <small class="text-muted">` + category.soldCount + ` articulos </small>
            </div>
            <p>` + category.description + `</p>
-           <p> ${category.currency } ${ category.cost } </p>
+           <p> ${ category.cost }  ${category.currency }  </p>
            </div>
            </div>
            </div>`
@@ -93,11 +93,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
     });
 
     document.getElementById("sortAsc").addEventListener("click", function () {
-        sortAndShowCategories(ORDER_ASC_BY_NAME);
+        sortAndShowCategories(ORDER_ASC_BY_PRICE);
     });
 
     document.getElementById("sortDesc").addEventListener("click", function () {
-        sortAndShowCategories(ORDER_DESC_BY_NAME);
+        sortAndShowCategories(ORDER_DESC_BY_PRICE);
     } ) ;
 
     document.getElementById("sortByCount").addEventListener("click", function () {
@@ -136,4 +136,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showCategoriesList();
     });
-});
+}); 
