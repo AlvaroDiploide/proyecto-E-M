@@ -12,6 +12,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
@@ -21,21 +22,23 @@
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
         <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+        <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="entrada"></a>
+        <a href="#" onclick="signOut();">Cerrar Sesion</a>
       </div>
     </nav>
     <div class="Productos1">
       <h1>Productos</h1>
-      <p class="cambio">Aquí verás todos los autos</p>
+      <p class="cambio">Aquí verás todos los autos disponibles</p>
     </div>
         <div class="container">
             <div class="row">
                 <div class="col text-right">
                     <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                         <label class="btn btn-light" id="sortAsc">
-                          <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>$
+                          <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down-alt mr-1"></i><i class='fas fa-dollar-sign'></i>
                         </label>
                         <label class="btn btn-light" id="sortDesc">
-                          <input type="radio" name="options" autocomplete="on"><i class="fas fa-sort-amount-up mr-1"></i>$.
+                          <input type="radio" name="options" autocomplete="on"><i class="fas fa-sort-amount-down mr-1"></i> <i class='fas fa-dollar-sign'></i>
                         </label>
                         <label class="btn btn-light" id="sortByCount" >
                             <input type="radio" name="options" autocomplete="off"><i class="fas 'fas fa-car fa-lg' mr-1"></i>Relevancia.
@@ -45,15 +48,15 @@
               </div>
     <section>
       <div class="row justify-content-end">
-        <div class="col-md-6"></div>
-        <div class="col-md-6 col-sm-12 mb-1 container">
-          <div class="row container p-0 m-0">
-            <div class="col">
-              <p class="font-weight-normal text-right my-2">Precio</p>
-            </div>
-            <div class="col">
-              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
-            </div>
+             <div class="col-md-6"></div>
+                <div class="col-md-6 col-sm-12 mb-1 container">
+                <div class="row container p-0 m-0">
+                <div class="col">
+                    <p class="font-weight-normal text-right my-2">Precio</p>
+               </div>
+                <div class="col">
+                   <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+                </div>
             <div class="col">
               <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
             </div>
@@ -63,14 +66,7 @@
                 <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
     </section>        
     <div class="filtro">
-      <input type="text" placeholder="Filtro..." class="message">
-      <script>
-        let textBox = document.getElementById('message');
-        textBox.addEventListener('keydown', (event) => {
-          console.log(`key=${event.key},code=${event.code}`);
-
-        });
-      </script>
+      <input type="text" placeholder="It does not work..." class="message">
     </div>
     <br>
     <div class="row justify-content-end"></div>
@@ -93,5 +89,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/cerrar.js"></script>
   </body>
 </html>

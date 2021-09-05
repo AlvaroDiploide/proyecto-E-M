@@ -21,7 +21,7 @@
       -ms-user-select: none;
       user-select: none;
     }
-
+  
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -31,6 +31,8 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/carr.css" rel="stylesheet">
 </head>
 
 <body>
@@ -41,12 +43,23 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
       <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="entrada"></a>
+      <a href="#" onclick="signOut();">Cerrar Sesion</a>
     </div>
   </nav>
   <div class="container p-5">
     <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">¡A trabajar! :)</h4>
       <p>Esta sección corresponde a: Entrega 6 (Fecha de entrega: 31/10/2021).</p>
+      <hr>
+      <div class="card" id="mi-Prefil">
+        <img src="/img/cover_back.png" alt="JAP" style="width:100%">
+        <p>Solo probando ...</p>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p><button>Contact</button></p>
+      </div>
       <hr>
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
     </div>
@@ -76,6 +89,8 @@
   <script src="js/dropzone.js"></script>
   <script src="js/init.js"></script>
   <script src="js/my-profile.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/cerrar.js"></script>
 </body>
 
 </html>
