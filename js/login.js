@@ -2,14 +2,10 @@
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
 document.addEventListener("DOMContentLoaded", function(e){
-
-    if (localStorage.getItem("user") == null){
-        window.location.herf = home.html
-    }
-    document.getElementById("desplegar").innerHTML = "Bienvenida/a" + localStorage.getItem("user");
+    document.getElementById("entrada").innerHTML = localStorage.getItem("nombre");
 });
 
-function usuario(){
-    var usuario = document.getElementById("correo").nodeValue;
-    localStorage.setItem("user", usuario);
+function ingreso () {
+    var email = document.getElementById("correo" ).value;
+    localStorage.setItem("nombre", email )
 }

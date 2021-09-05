@@ -155,3 +155,27 @@ img{
   padding-left: 18%;
   background-color:white
 }
+
+
+/**** estilos para el filtro de búsqueda de productos******/
+
+.cars {
+  display: grid;
+  grid-template-columns:repeat(auto fit, minmax(250px, 1fr));
+}
+
+.Productos1 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center!important;
+}
+
+.cambio {
+  font-size: 1.25rem;
+    font-weight: 300;
+    background-color:rgb(252, 246, 246);
+    color: black
+}
+.filtro {
+  text-align: right!important; 
+}
