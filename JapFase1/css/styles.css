@@ -174,8 +174,19 @@ img{
   font-size: 1.25rem;
     font-weight: 300;
     background-color:rgb(252, 246, 246);
-    color: black
+    color:black;
 }
 .filtro {
   text-align: right!important; 
+}
+
+#estrelas {
+color: gold;
+}
+
+#perro{
+  background-color: yellow;
+}
+.prueba {
+ width: 200px;
 }
