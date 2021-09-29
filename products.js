@@ -48,7 +48,8 @@ function showCategoriesList() {
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))) {
 
         productsPages +=
-         `<div class="ist-group-item list-group-item-action">
+         ` <a href="product-info.html" class="list-group-item list-group-item-action">
+         <div class="ist-group-item list-group-item-action">
            <div class="row">
             <div class="col-3">
             <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
@@ -56,10 +57,10 @@ function showCategoriesList() {
          <div class="col">
          <div class="d-flex w-100 justify-content-between">
          <h4 class="mb-1">`+ category.name + `</h4>
-         <small class="text-muted">` + category.soldCount + ` articulos </small>
+         <small class="text-muted">` + category.soldCount + ` articulos </small><br>
            </div>
            <p>` + category.description + `</p>
-           <p> ${ category.cost }  ${category.currency }  </p>
+           <p>  ${category.currency} ${category.cost }   </p>
            </div>
            </div>
            </div>`

@@ -156,6 +156,10 @@ img{
   background-color:white
 }
 
+.lead {
+  background-color: yellow;
+}
+
 
 /**** estilos para el filtro de búsqueda de productos******/
 
@@ -173,9 +177,80 @@ img{
 .cambio {
   font-size: 1.25rem;
     font-weight: 300;
-    background-color:rgb(252, 246, 246);
-    color: black
+    background-color:yellow;
+    color:black;
 }
 .filtro {
   text-align: right!important; 
 }
+
+/* ....................  Estilos de comentarios y estrellas   .........*/
+#estrelas {
+color: gold;
+}
+
+#perro{
+  background-color: yellow;
+}
+.prueba {
+ width: 200px;
+}
+
+.fb-comments{
+  background-color:lavender;
+  margin-left: 50px;
+}
+ 
+/*.................   Estilos del  carrito  ...................*/
+header{
+  z-index:  100;
+}
+
+.description {
+  height: 25px;
+ overflow: hidden;
+ transition: height .3s ease-in .3s;
+}
+
+.description:hover{
+height: 80px;
+}
+
+.carrito {
+  min-height: 80vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.table__productos {
+  display: flex;
+}
+
+.table__productos > img {
+  width: 9rem;
+  object-fit: contain;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.table__cantidad > input {
+  width: 40px;
+  border: none;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+
+.dropdown-menu {
+  background-color: #47494b;
+  padding: 10px;
+  font-size: 16px;
+  border:none;
+}
+
+
+
