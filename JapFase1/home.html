@@ -16,14 +16,27 @@
   </head>
   <body>
     <nav class="site-header sticky-top py-1 bg-dark">
+      <div id="fb-root"></div>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0"
+        nonce="8wEHU41i"></script>
       <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href=""></a>
         <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
         <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
         <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
         <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <a class="py-2 d-none d-md-inline-block" href="my-profile.html" id="entrada"></a>
-        <a href="#" onclick="signOut();">Cerrar sesión</a>
+        
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
+            id="entrada"></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
+            <a class="dropdown-item" href="cart.html">Mi carrito</a>
+            <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
+          </div>
+        </div>
+      </div>
       </div>
     </nav>
     <main role="main">
@@ -103,6 +116,8 @@
         </p>
         <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        <div class="fb-comments" data-href="https://github.com/AlvaroDiploide/proyecto-E-M" data-width="800" data-numposts="6">
+        </div>
       </div>
     </footer>
     <script src="js/jquery-3.4.1.min.js"></script>

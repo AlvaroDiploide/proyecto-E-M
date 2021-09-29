@@ -1,5 +1,7 @@
 var category = {};
 
+
+// Funcion para mostrar imágenes
 function showImagesGallery(array) {
 
     let htmlContentToAppend = "";
@@ -21,6 +23,7 @@ function showImagesGallery(array) {
     }
 }
 
+// Función para mostrar comentarios
 function mostrarComentarios (array) {
     let comments = " ";
     for (let i = 0 ; i < array.length; i++) {
@@ -42,6 +45,28 @@ function mostrarComentarios (array) {
     }
 }
 
+/*document.getElementById("formulario").addEventListener("submit", function (e) {
+    e.preventDefault()//evita que se refresque la pagina     
+    addComment(e)
+})
+
+function addComment(e) {
+    var usuario = localStorage.getItem("Nombre")
+    var score = document.getElementById("puntaje").value
+    var comment = document.getElementById("comentarioNuevo").value
+    var fecha = new Date()  
+      let htmlContentToAppend = "";
+    var div = document.createElement("div")
+     htmlContentToAppend += `
+        <div class="row gx-5">
+            <p>+showStars(score) +<br> <b>+ usuario +  -</b> + fecha+ <br> + comment +<br></p>
+        </div>`
+             div.innerHTML = htmlContentToAppend
+            document.getElementById("comentarios").appendChild(div)
+              }*/
+
+
+// Función para mostrar estrellas
 function mostrarEstrellas(score) {
     let estrellas = "";
 
@@ -53,9 +78,10 @@ function mostrarEstrellas(score) {
             estrellas += ` <i class= "far fa-star"></i>`;
         }
     }
-    return estrellas
+    return estrellas;
 }
 
+// Función para mostrar productos relacionados
 function mostrarProductos(array) {
 
     let productosRelacionados = "";
@@ -66,21 +92,37 @@ function mostrarProductos(array) {
         productosRelacionados +=`
          <div class="card-body">
          
-         <div>  <a  href="products.html" target="_blank"><img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt=""></a> </div>
-         <div> ${relacionado.currency} ${relacionado.cost}   
-         <br>${relacionado.name}
+         <div>  <a  href="products.html" target="_blank">
+         <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt=""></a> </div>
+         <div> ${relacionado.currency} ${relacionado.cost}  <br>${relacionado.name}
          <br>
          <br>
          </div>
           </div>
         
-         
-         `
+          `
         document.getElementById("relatedtCriteria").innerHTML = productosRelacionados;
     }
 
 }
 
+// Función para calificar (estrellas)
+
+var contador;
+function calificar(item) {
+    console.log(item);
+    contador = item.id[0];
+    let nombre = item.id.substring(1);
+
+    for (let index = 0; index < 5; index++) {
+        if (i < contador) {
+            document.getElementById((i + 1) + nombre).style.color = "orange";
+        } else {
+            document.getElementById((i + 1) + nombre).style.color = "black";
+        }
+
+    }
+}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
@@ -96,14 +138,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
             let categoryCateHTML = document.getElementById("categoryCate");
             let productCountHTML = document.getElementById("productCount");
             let productCriteriaHTML = document.getElementById("productCriteria");
-            //let relatedProductsHTML = document.getElementById("relatedtCriteria");
 
             categoryNameHTML.innerHTML = category.name;
             categoryDescriptionHTML.innerHTML = category.description;
             categoryCateHTML.innerHTML = category.category;
             productCountHTML.innerHTML = category.currency + category.cost;
             productCriteriaHTML.innerHTML = category.soldCount;
-            //relatedProductsHTML.innerHTML = category.relatedProducts;
 
             //Muestro las imagenes en forma de galería
             showImagesGallery(category.images);

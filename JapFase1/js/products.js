@@ -60,7 +60,7 @@ function showCategoriesList() {
          <small class="text-muted">` + category.soldCount + ` articulos </small><br>
            </div>
            <p>` + category.description + `</p>
-           <p> ${ category.cost }  ${category.currency }  </p>
+           <p>  ${category.currency} ${category.cost }   </p>
            </div>
            </div>
            </div>`
