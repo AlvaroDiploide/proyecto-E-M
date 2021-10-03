@@ -3,31 +3,16 @@
 <html lang="en">
 
 <head>
+  <!--Font-awesome para que aparezcan los iconos-->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
@@ -36,24 +21,85 @@
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href=" "></a>
+      <a class="py-2 d-none d-md-inline-block" href="# "></a>
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+
+      <!--Menú despegable con Boostrap-->
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
           id="entrada"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
-          <a class="dropdown-item" href="cart.html">Mi carrito<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
+          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
         </div>
+      </div>
+      <div id="icon-menu">
+        <a class="dropdown-item" href="cart.html"><i class="fas fa-cart-plus"></i></a>
       </div>
     </div>
   </nav>
   <div class="container">
+
+    <nav class="navbar navbar-default" role="navigation">
+      <!-- El logotipo y el icono que despliega el menú se agrupan
+           para mostrarlos mejor en los dispositivos móviles -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Desplegar navegación</span>
+          <span class="icon-bar">e-Mercado</span>
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+    
+      <!-- Agrupar los enlaces de navegación, los formularios y cualquier
+           otro elemento que se pueda ocultar al minimizar la barra -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Menú<b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="home.html">Inicio</a></li>
+              <li><a href="categories.html">Categorías</a></li>
+              <li><a href="#">Acción #3</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Acción #4</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Acción #5</a></li>
+            </ul>
+          </li>
+        </ul>
+    
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Buscar">
+          </div>
+          <button type="submit" class="btn btn-default">Enviar</button>
+        </form>
+    
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Enlace #3</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Menú #2 <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Acción #1</a></li>
+              <li><a href="#">Acción #2</a></li>
+              <li><a href="#">Acción #3</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Acción #4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <div class="text-center p-4">
       <h2>Vender</h2>
       <p class="lead">Ingresa los datos del artículo a vender.</p>

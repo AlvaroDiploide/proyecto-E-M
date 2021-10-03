@@ -42,22 +42,25 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0"
       nonce="8wEHU41i"></script>
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-            <a class="py-2 d-none d-md-inline-block" href=" "></a>
+            <a class="py-2 d-none d-md-inline-block" href="#"></a>
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
+
+      <!--Menú despegable con Boostrap-->
       <div class="dropdown">
-        
         <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
           id="entrada"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
+          <a class="dropdown-item" href="home.html">Inicio<i class="fas fa-house-damage"></i></a>
+          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
-    </div>
+        <div id="icon-menu">
+          <a class="dropdown-item" href="cart.html"><i class="fas fa-cart-plus"></i></a>
+        </div>
     </div>
   </nav>
   <section class="jumbotron text-center">
@@ -68,9 +71,8 @@
         <hr>
         <div class="card" id="mi-Prefil">
           <p>Solo probando ...</p>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="https://github.com/AlvaroDiploide/proyecto-E-M"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/learning/paths/conviertete-en-especialista-en-administracion-de-redes"><i class="fa fa-linkedin"></i></a>
           <p><button>Contact</button></p>
         </div>
       </div>
@@ -82,6 +84,7 @@
       <div class="container">
         <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        <!--Plugins de Facebook para comentarios-->
         <div class="fb-comments" data-href="https://github.com/AlvaroDiploide/proyecto-E-M" data-width="800"
           data-numposts="6">
         </div>
