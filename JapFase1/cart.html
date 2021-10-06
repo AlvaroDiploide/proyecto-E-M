@@ -3,36 +3,21 @@
 <html lang="en">
 
 <head>
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
-
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
-
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/dropzone.css" rel="stylesheet">
@@ -40,169 +25,70 @@
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
-    <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0"
       nonce="8wEHU41i"></script>
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href=" "></a>
+      <a class="py-2 d-none d-md-inline-block" href="#"></a>
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
 
+      <!--Menú despegable con Boostrap-->
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
           id="entrada"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
-          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
+          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
-    </div>
+      <div id="icon-menu">
+        <a class="dropdown-item" href="home.html"><i class="fas fa-bars"></i></a>
+      </div>
     </div>
   </nav>
+  <br>
+  <br>
 
-  <header class="container-fluid bg-dark position-sticky top-0"></header>
-  <ul class="nav nav-pills mb-3 py-3  container" id="pills-tab" role="tablist">
+  <div class="carrito">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Producto</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col"><i class="far fa-credit-card"></i></th>
+        </tr>
+      </thead>
 
-    <li class="nav-item" role="presentation">
-      <a class="nav-link  active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-        type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Productos</a>
-    </li>
-    <li class="nav-item" role="presentation">
-      <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button"
-        role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</a>
-    </li>
-  </ul>
+      <tbody>
+        <tr id="poraca">
+          <th scope="row">1</th>
+          <td class="table__productos">
+            <img src="/img/tree1.jpg" alt="#">
+            <h6 class="Title">Title</h6>
+          </td>
+          <td class="table__precio">
+            <p>UYU 100</p>
+          </td>
+          <td class="table__cantidad"><input type="number" min="1" value="2">
+            <button class="delete btn btn-danger">x</button>
+          </td>
+          <td class="row-cols-md-2">
+            <button class="btn btn-success">COMPRAR</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade " id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">1</div>
-    <div class="tab-pane fade show active  container" id="pills-profile" role="tabpanel"
-      aria-labelledby="pills-profile-tab">
-
-      <h2 class="h4 m-4 text-primary">No oficial, estoy trabajando en esto todavía...</h2>
-
-      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Terrible máquina!</h5>
-            <img src="/img/prod4.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Card Products 1 </h5>
-            <img src="/img/cat5.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Card Products 2</h5>
-            <img src="/img/cat9.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Card Products 3</h5>
-            <img src="/img/car3.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Card Products 4!</h5>
-            <img src="/img/cat7.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-center mb-4">
-          <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-primary">Card Products 5</h5>
-            <img src="/img/cat6.jpg" class="card-img-top" alt=" ">
-            <div class="card-body ">
-              <p class="card-text text-white-50 description">"El modelo de auto que se sigue renovando y manteniendo su
-                prestigio en comodidad."</p>
-              <h5 class="text-primary">Precio: <span class="precio">USD 15.200</span></h5>
-              <div class="d-grid gap-2">
-                <button class="btn btn-primary button">Me lo llevo!</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-      <br>
-      <table class="table table-dark table-striped">
-        <thead>
-          <tr class="text-primary">
-            <th scope="col">#</th>
-            <th scope="col">Productos</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Cantidad</th>
-          </tr>
-        </thead>
-
-        <!-- La class "tbody" la voy a obtener como variable global en el JavaScrip (en líne 9)-->
-        <tbody class="tbody">
-      
-        </tbody>
-      </table>
-      <br><br>
-      <div class="row mx-4">
-        <div class="col">
-          <h3 class="itemCartTotal">Total: 0</h3>
-        </div>
-        <div class="col d-flex justify-content-end">
-          <button class="btn btn-success">COMPRAR</button>
-        </div>
-      </div>
-
+  <br><br>
+  <div class="row mx-4">
+    <div class="col">
+      <h3 class="itemCartTotal">Total: UYU 100</h3>
     </div>
   </div>
 
@@ -218,19 +104,9 @@
       <hr>
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
     </div>
-
-    <div class="fb-comments" data-href="https://github.com/AlvaroDiploide/proyecto-E-M" data-width="800"
-      data-numposts="6">
-    </div>
-
   </div>
   <div id="spinner-wrapper">
     <div class="lds-ring">
-
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
     </div>
   </div>
 

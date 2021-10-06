@@ -4,22 +4,35 @@ var category = {};
 // Funcion para mostrar imágenes
 function showImagesGallery(array) {
 
-    let htmlContentToAppend = "";
+    let addContent = "";
 
     for (let i = 0; i < array.length; i++) {
         let imageSrc = array[i];
 
-        htmlContentToAppend += `
-
-        <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
-            </div>
-        </div>
-         <hr>
+        if (i === 0) {
+        addContent += `
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="${imageSrc}" alt="First slide">
+         </div>
         `
-
-        document.getElementById("productImagesGallery").innerHTML = htmlContentToAppend;
+    } else {
+            addContent += `
+        <div class="carousel-item ">
+            <img class="d-block w-100" src="${imageSrc}" alt="First slide">
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden"></span>
+              </button>
+        `
+    }
+        document.getElementById("productImagesGallery").innerHTML = addContent;
     }
 }
 
@@ -31,7 +44,6 @@ function mostrarComentarios (array) {
         
         comments += `
         <div class="ist-group-item list-group-item">
-            <div id="diseñoCt">
              <div ><b> ${comentarios.user} </b></div>
                <div id="estrelas"> ${mostrarEstrellas(comentarios.score)}</div>
                <div> <q>${comentarios.description} </q> </div>
@@ -39,31 +51,10 @@ function mostrarComentarios (array) {
                <br>
                <hr>
             </div>
-            </div>
         `
         document.getElementById("datos").innerHTML = comments;
     }
 }
-
-/*document.getElementById("formulario").addEventListener("submit", function (e) {
-    e.preventDefault()//evita que se refresque la pagina     
-    addComment(e)
-})
-
-function addComment(e) {
-    var usuario = localStorage.getItem("Nombre")
-    var score = document.getElementById("puntaje").value
-    var comment = document.getElementById("comentarioNuevo").value
-    var fecha = new Date()  
-      let htmlContentToAppend = "";
-    var div = document.createElement("div")
-     htmlContentToAppend += `
-        <div class="row gx-5">
-            <p>+showStars(score) +<br> <b>+ usuario +  -</b> + fecha+ <br> + comment +<br></p>
-        </div>`
-             div.innerHTML = htmlContentToAppend
-            document.getElementById("comentarios").appendChild(div)
-              }*/
 
 
 // Función para mostrar estrellas
@@ -84,21 +75,18 @@ function mostrarEstrellas(score) {
 // Función para mostrar productos relacionados
 function mostrarProductos(array) {
 
-    let productosRelacionados = "";
+    let productosRelacionados = " ";
 
     for (let i = 0; i < category.relatedProducts.length; i++) {
         let relacionado= array[category.relatedProducts[i]];
 
         productosRelacionados +=`
-         <div class="card-body">
-         
-         <div>  <a  href="products.html" target="_blank">
-         <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt=""></a> </div>
-         <div> ${relacionado.currency} ${relacionado.cost}  <br>${relacionado.name}
-         <br>
-         <br>
+         <div class="card-body"><div>  
+            <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt="#" ></div>
+                <div class="relColor"> ${relacionado.currency} ${relacionado.cost}  <br> ${relacionado.name}
+                     <br>
+                </div>
          </div>
-          </div>
         
           `
         document.getElementById("relatedtCriteria").innerHTML = productosRelacionados;
@@ -106,23 +94,6 @@ function mostrarProductos(array) {
 
 }
 
-// Función para calificar (estrellas)
-
-var contador;
-function calificar(item) {
-    console.log(item);
-    contador = item.id[0];
-    let nombre = item.id.substring(1);
-
-    for (let index = 0; index < 5; index++) {
-        if (i < contador) {
-            document.getElementById((i + 1) + nombre).style.color = "orange";
-        } else {
-            document.getElementById((i + 1) + nombre).style.color = "black";
-        }
-
-    }
-}
 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los

@@ -27,25 +27,28 @@
       <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
     </div>
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block" href=" "></a>
+      <a class="py-2 d-none d-md-inline-block" href="# "></a>
       <a class="py-2 d-none d-md-inline-block" href="home.html">Inicio</a>
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
 
+      <!--Menú despegable con Boostrap-->
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
           id="entrada"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="my-profile.html">Mi perfil <i class="fas fa-street-view"></i></a>
-          <a class="dropdown-item" href="cart.html">Mi carrito<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
           <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a>
         </div>
       </div>
-    </div>
+      <div id="icon-menu">
+        <a class="dropdown-item" href="cart.html"><i class="fas fa-cart-plus"></i></a>
+      </div>
     </div>
   </nav>
+  
   <div class="Productos1">
     <h1>Productos</h1>
     <p class="cambio">Aquí verás todos los autos disponibles</p>

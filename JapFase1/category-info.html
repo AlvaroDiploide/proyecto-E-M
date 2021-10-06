@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+  <!--Font-awesome para que aparwzcan los iconos-->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -27,15 +29,18 @@
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
 
+      <!--Menú despegable con Boostrap-->
       <div class="dropdown">
         <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
           id="entrada"></a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
-          <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión</a>
+          <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión<i class="fas fa-sign-out-alt"></i></a>
         </div>
+      </div>
+      <div id="icon-menu">
+        <a class="dropdown-item" href="cart.html"><i class="fas fa-cart-plus"></i></a>
       </div>
     </div>
     </div>
@@ -48,6 +53,7 @@
         <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
           seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
       </div>
+      
       <h3 id="categoryName"></h3>
       <hr class="my-3">
       <dl>

@@ -18,3 +18,7 @@ function redireccionar (){
     }
 }
 
+// Funcion mostrar menu
+
+
+

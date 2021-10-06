@@ -7,13 +7,14 @@
 }
 
 .jumbotron {
+  width: 100%;
   height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
   background-color: #53C0FB;
   background: url('../img/cover_back.png');
   background-size: cover;
-  background-position: center;
+  background-position:center;
   background-repeat: no-repeat;
   color: black;
   font-weight: bold;
@@ -54,9 +55,30 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.site-header a {
-  color: white;
+.site-header a  {
+  color:white;
   transition: ease-in-out color .15s;
+  color: lawngreen;
+}
+
+ /* Menú para momentos de <responsive Desing*/
+#icon-menu {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 60px;
+  top: 4.5px;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#icon-menu:hover {
+  background-color:rgb(202, 88, 202);
 }
 
 .light-text {
@@ -160,7 +182,6 @@ img{
   background-color: yellow;
 }
 
-
 /**** estilos para el filtro de búsqueda de productos******/
 
 .cars {
@@ -189,8 +210,10 @@ img{
 color: gold;
 }
 
+/*...Este id="perro" esta en product-info.. Para subtítulos*/
 #perro{
   background-color: yellow;
+    text-align: center!important;
 }
 .prueba {
  width: 200px;
@@ -202,7 +225,7 @@ color: gold;
 }
  
 /*.................   Estilos del  carrito  ...................*/
-header{
+header, .alert{
   z-index:  100;
 }
 
@@ -217,8 +240,8 @@ height: 80px;
 }
 
 .carrito {
-  min-height: 80vh;
-  max-width: 1000px;
+  min-height: 10vh;
+  max-width: 1340px;
   margin: 0 auto;
   width: 100%;
 }
@@ -252,5 +275,28 @@ height: 80px;
   border:none;
 }
 
+.hide, .remove{
+  display: none;
+}
 
+.relColor {
+  background-color: brown;
+  color: #fff;
+  text-anchor: end;
+}
 
+/* mapa de google */
+#mapid { height: 180px; }
+
+@media screen and (max-width: 768px){
+  .jumbotron,
+  .py-2,
+  #move-content{
+    display:block !important;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+
+  }
+  
+}
