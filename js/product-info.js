@@ -83,7 +83,7 @@ function mostrarProductos(array) {
         productosRelacionados +=`
          <div class="card-body"><div>  
             <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt="#" ></div>
-                <div class="relColor"> ${relacionado.currency} ${relacionado.cost}  <br>${relacionado.name}
+                <div class="relColor"> ${relacionado.currency} ${relacionado.cost}  <br> ${relacionado.name}
                      <br>
                 </div>
          </div>
