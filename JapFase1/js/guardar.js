@@ -1,4 +1,4 @@
-/*
+
 // Función para ir agregando los productos al carrito!
 // el querySelector me permite tener alguna clase de button o ID
 const clickButton = document.querySelectorAll('.button')
@@ -162,4 +162,4 @@ window.onload = function () {
 
 }
 document.addEventListener("DOMContentLoaded", function (e) {
-});*/
+});

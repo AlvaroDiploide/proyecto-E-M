@@ -1,62 +1,69 @@
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
+var cartproducts = [ ];
 
-var category = {};
-function mostrarProductos(array) {
+// Funcion para mostrar imágenes
+function showImagesGallery() {
+    let pord = cartproducts.articles;
+    let htmlContentToAppend = "";
+    let subTotal= 0;
+    let iva = 0;
+    let suma = 0;
 
-    let productosRelacionados = " ";
 
-    for (let i = 0; i < category.relatedProducts.length; i++) {
-        let relacionado = array[category.relatedProducts[i]];
+    for (let i = 0; i < pord.length; i++) {
+        let cartItem = pord[i];
+        suma +=(cartItem.count) *(cartItem.unitCost);
+        subTotal +=(cartItem.count) / 1.22;
+        iva += subTotal * 22;
 
-        productosRelacionados += `
-         <div class="card-body">
-         <div>  
-         <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt="#" ></div>
-         <div class="relColor"> ${relacionado.currency} ${relacionado.cost}  <br>${relacionado.name}
-         <br>
-         </div>
-        </div>
-        
-          `
-        document.getElementById("poraca").innerHTML = productosRelacionados;
+        htmlContentToAppend += `
+
+          <tr>
+                    <th scope="row-2"></th>
+                    <td class="table__productos">
+                        <img src="${cartItem.src}"alt="#">
+                        <h6 class="Title"> "${cartItem.name}"</h6>
+                    </td>
+                    <td class="table__precio">
+                        <p>${cartItem.currency} ${cartItem.unitCost}</p>
+                    </td>
+                    <td class="table__cantidad"><input type="number" min="1" value="${cartItem.count}">
+                    </td>
+                    <td class="row-cols-md-2"  id="subT">
+                    </td>
+                    <td class="row-cols-md-2"  id="iva(22%)">
+                    </td>
+                    <td class="row-cols-md-2"  id="suma">
+                    </td>
+                     
+
+                     <td class="row-cols-md-1"  >
+                     <button class="delete btn btn-danger">Eliminar</button>
+                        <button class="btn btn-success">Comprar</button>
+                    </td>
+                </tr>
+        `
+
     }
-
+    document.getElementById("carrito").innerHTML = htmlContentToAppend;
+    document.getElementById("suma").innerHTML = suma
+    document.getElementById("subT").innerHTML = subTotal
+    document.getElementById("iva(22%)").innerHTML = iva
 }
+
+
 document.addEventListener("DOMContentLoaded", function (e) {
-    getJSONData(PRODUCTS_URL).then(function (productRE) {
-        if (productRE.status === "ok") {
+    getJSONData(CART_INFO_URL).then(function (cartPino) {
+        if (cartPino.status === "ok") {
+            cartproducts = cartPino.data;
+            console.log (cartproducts);
 
-            productoslocos = productRE.data;
 
-            mostrarProductos(productoslocos);
-        };
+
+          
+          
+            //Muestro las categorías ordenadas
+            showImagesGallery();
+        }
+
     });
 });
-
-//Funcion para guardar datos del carrito al refrescar la página
-function addLocalStorage() {
-    localStorage.setItem('carrito', JSON.stringify(carrito))
-}
-
-window.onload = function () {
-    const storage = JSON.parse(localStorage.getItem('carrito'));
-    if (storage) {
-        carrito = storage;
-        renderCarrito()
-    }
-
-}
-
-function removeItemCarrito(e) {
-    const buttonDelete = e.target // nos da el boton al cual dimos click (en este caso el de eliminar)
-    const tr = buttonDelete.closest(".itemCarrito");
-    tr.remove()
-    const alert = document.querySelector('.remove')
-    setTimeout(function () {
-        alert.classList.add('remove')
-    }, 1000)
-    alert.classList.remove('remove');
-    console.log('te  lavaste');
-}
