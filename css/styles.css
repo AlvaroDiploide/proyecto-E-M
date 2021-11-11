@@ -219,13 +219,10 @@ color: gold;
  width: 200px;
 }
 
-.fb-comments{
-  background-color:lavender;
-  margin-left: 50px;
-}
  
-/*.................   Estilos del  carrito  ...................*/
+/*. Estilos del carrito (la clase deslizar es la del carrito de productos) ...................*/
 header, .alert{
+  display: flex;
   z-index:  100;
 }
 
@@ -235,7 +232,13 @@ header, .alert{
  transition: height .3s ease-in .3s;
 }
 
-.description:hover{
+.deslizar {
+  height: 29px;
+ overflow: hidden;
+ transition: height .2s ease-in .2s;
+}
+
+.deslizar:hover{
 height: 80px;
 }
 
@@ -244,6 +247,10 @@ height: 80px;
   max-width: 1340px;
   margin: 0 auto;
   width: 100%;
+}
+
+.is-invalid{
+  background-color: pink;
 }
 
 .table__productos {
@@ -288,7 +295,7 @@ height: 80px;
 /* mapa de google */
 #mapid { height: 180px; }
 
-@media screen and (max-width: 768px){
+/*@media screen and (max-width: 768px){
   .jumbotron,
   .py-2,
   #move-content{
@@ -299,4 +306,4 @@ height: 80px;
 
   }
   
-}
+}*/
