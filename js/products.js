@@ -46,24 +46,33 @@ function showCategoriesList() {
 
         if (((minCount == undefined) || (minCount != undefined && parseInt(category.cost) >= minCount)) &&
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.cost) <= maxCount))) {
+                
 
         productsPages +=
-         ` <a href="product-info.html" class="list-group-item list-group-item-action">
-         <div class="ist-group-item list-group-item-action">
-           <div class="row">
-            <div class="col-md-5">
-            <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
+         `
+        <div class="col-md-4">
+           <div class="card  border-warning  mb-3 bg-light rounded" style="max-width: 120rem">
+            <h4 class="card-title text-center shadow pt-2 text-dark">`+ category.name + `</h4>
+
+              <p class="text-dark shadow text-center">
+              <small>` + category.soldCount + ` articulos en stock</small>
+              </p>
+
+              <img src=` + category.imgSrc + ` alt="..">
+              <br>
+
+              <p class="deslizar text-dark text-center shadow d-flex w-100 justify-content-between">` + category.description + `</p>
+
+             <p class="text-center text-light bg-warning"> ${category.currency} ${category.cost } </p>
+
+             <a href="product-info.html" class="text-center">
+             <button class="btn btn-primary button">+ Información</button>
+             </a>
+             <br>
+           </div>
+           </div>
          </div>
-         <div class="col">
-         <div class="d-flex w-100 justify-content-between">
-         <h4 class="mb-4">`+ category.name + `</h4>
-         <small class="text-muted">` + category.soldCount + ` articulos </small>
-           </div>
-           <p>` + category.description + `</p>
-           <p>  ${category.currency} ${category.cost }   </p>
-           </div>
-           </div>
-           </div>`
+         `
         }
 
         document.getElementById("cat-list-container").innerHTML = productsPages;
