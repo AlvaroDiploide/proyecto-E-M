@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
 
+     <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -18,7 +20,7 @@
 
 <body>
   <nav class="site-header sticky-top py-1 bg-dark">
-    <div id="fb-root"></div>
+    <div id="#"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0"
       nonce="8wEHU41i"></script>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -53,6 +55,8 @@
     <h1>Productos</h1>
     <p class="cambio">Aquí verás todos los autos disponibles</p>
   </div>
+
+  <!-- Acá tenemos los botones: min, máx y relevancia -->
   <div class="container">
     <div class="row">
       <div class="col text-right">
@@ -71,6 +75,8 @@
         </div>
       </div>
     </div>
+
+    <!-- En este section: relevancia de productos x precio -->
     <section>
       <div class="row justify-content-end">
         <div class="col-md-6"></div>
@@ -90,16 +96,16 @@
                 <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
                 <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
     </section>
+
+    <!-- Filtro de búsqueda-->
     <div class="filtro">
-      <input type="text" placeholder="It does not work..." class="message">
+      <input type="text" placeholder="..." class="message">
     </div>
     <br>
-    <div class="row justify-content-end"></div>
-    <div class="container">
-      <div class="row">
-        <div class="list-group" id="cat-list-container">
-        </div>
-      </div>
+
+    <!-- Id donde guardo mi contenido-->
+      <div class="row" id="cat-list-container"></div>
+      
       <footer class="text-muted bg-light">
         <div class="container">
           <p class="float-right">
@@ -108,12 +114,9 @@
           <p class="text-center">Este sitio forma parte de Desarrollo Web - JAP - 2020. Clickea <a target="_blank"
               href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
           </div>
-          <!--<div class="fb-comments" data-href="https://github.com/AlvaroDiploide/proyecto-E-M" data-width="800"
-            data-numposts="6">
-          </div>-->
         </div>
       </footer>
-      <div id="spinner-wrapper">
+      <div  id="spinner-wrapper">
         <div class="lds-ring">
           <div></div>
           <div></div>
@@ -121,6 +124,7 @@
           <div></div>
         </div>
       </div>
+      
       <script src="js/jquery-3.4.1.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/init.js"></script>
