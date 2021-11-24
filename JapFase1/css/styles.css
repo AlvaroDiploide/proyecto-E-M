@@ -219,13 +219,10 @@ color: gold;
  width: 200px;
 }
 
-.fb-comments{
-  background-color:lavender;
-  margin-left: 50px;
-}
  
-/*.................   Estilos del  carrito  ...................*/
+/*. Estilos del carrito (la clase deslizar es la del carrito de productos) ...................*/
 header, .alert{
+  display: flex;
   z-index:  100;
 }
 
@@ -235,7 +232,13 @@ header, .alert{
  transition: height .3s ease-in .3s;
 }
 
-.description:hover{
+.deslizar {
+  height: 19px;
+ overflow: hidden;
+ transition: height .1s ease-in .2s;
+}
+
+.deslizar:hover{
 height: 80px;
 }
 
@@ -244,6 +247,10 @@ height: 80px;
   max-width: 1340px;
   margin: 0 auto;
   width: 100%;
+}
+
+.is-invalid{
+  background-color: pink;
 }
 
 .table__productos {
@@ -285,10 +292,15 @@ height: 80px;
   text-anchor: end;
 }
 
+::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 50px;
+}
+
 /* mapa de google */
 #mapid { height: 180px; }
 
-@media screen and (max-width: 768px){
+/*@media screen and (max-width: 768px){
   .jumbotron,
   .py-2,
   #move-content{
@@ -299,4 +311,51 @@ height: 80px;
 
   }
   
+}*/
+
+/*[data-theme="light"] {
+  --bg-color:rgb(185, 129, 129);
+  --color: rgb(35, 40, 104);
+  --togglebg: #d4e7d5;
+  --toggleslider: #fff;
+  --roundcolor:#fff;
+  --svgcolor:#111;
 }
+
+[data-theme="dark"] {
+  --bg-color:#333333;
+  --color: #e9dcdc;
+  --togglebg: #333;
+  --toggleslider: #59517e;
+  --roundcolor:#333;
+  --svgcolor:rgb(128, 61, 61);
+}
+
+.slider {
+  background-color: var(--togglebg);
+  bottom: 1;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider::before {
+  background-color: var(--roundcolor);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 2;
+  background-color: var(--bg-color);
+  transition: all 0.5s;
+}*/
