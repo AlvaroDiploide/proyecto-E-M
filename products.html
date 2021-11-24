@@ -8,8 +8,9 @@
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
 
-     <!-- CSS only -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -19,10 +20,8 @@
 </head>
 
 <body>
-  <nav class="site-header sticky-top py-1 bg-dark">
-    <div id="#"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v12.0"
-      nonce="8wEHU41i"></script>
+  <nav class="site-header  py-1 bg-dark">
+    
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
       <a class="dropdown-item" href="cart.html">Mi carrito</a>
@@ -50,7 +49,7 @@
       </div>
     </div>
   </nav>
-  
+
   <div class="Productos1">
     <h1>Productos</h1>
     <p class="cambio">Aquí verás todos los autos disponibles</p>
@@ -60,7 +59,7 @@
   <div class="container">
     <div class="row">
       <div class="col text-right">
-        <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+        <div class="btn-group btn-group-toggle mb-4 shadow" data-toggle="buttons">
           <label class="btn btn-light" id="sortAsc">
             <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down-alt mr-1"></i><i
               class='fas fa-dollar-sign'></i>
@@ -86,51 +85,51 @@
               <p class="font-weight-normal text-right my-2">Precio</p>
             </div>
             <div class="col">
-              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+              <input class="form-control shadow" type="number" placeholder="min." id="rangeFilterCountMin">
             </div>
             <div class="col">
-              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+              <input class="form-control shadow" type="number" placeholder="máx." id="rangeFilterCountMax">
             </div>
             <div class="col-3 p-0">
               <div class="btn-group" role="group">
-                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
-                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                <button class="btn btn-light btn-block shadow" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm shadow" id="clearRangeFilter">Limpiar</button>
     </section>
 
-    <!-- Filtro de búsqueda-->
+    <!-- Filtro de búsqueda
     <div class="filtro">
       <input type="text" placeholder="..." class="message">
     </div>
-    <br>
+    <br>-->
 
     <!-- Id donde guardo mi contenido-->
-      <div class="row" id="cat-list-container"></div>
-      
-      <footer class="text-muted bg-light">
-        <div class="container">
-          <p class="float-right">
-            <a href="#">Volver arriba</a>
-          </p>
-          <p class="text-center">Este sitio forma parte de Desarrollo Web - JAP - 2020. Clickea <a target="_blank"
-              href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-          </div>
-        </div>
-      </footer>
-      <div  id="spinner-wrapper">
-        <div class="lds-ring">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+    <div class="row" id="cat-list-container"></div>
+
+    <footer class="text-muted bg-light">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p class="text-center">Este sitio forma parte de Desarrollo Web - JAP - 2020. Clickea <a target="_blank"
+            href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
-      
-      <script src="js/jquery-3.4.1.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/init.js"></script>
-      <script src="js/products.js"></script>
-      <script src="js/login.js"></script>
-      <script src="js/cerrar.js"></script>
+  </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/cerrar.js"></script>
 </body>
 
 </html>
