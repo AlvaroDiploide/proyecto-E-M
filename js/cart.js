@@ -1,10 +1,16 @@
 var cartproducts = [];
 var costoEnvio = 1.15;
+let envio = document.getElementsByName('pago');
+
 
 // Funcion para mostrar carrito y datos correspondientes
 function mostrarCart() {
     let pord = cartproducts.articles;
     let addEndHTML = "";
+
+  //  if (cartproducts.articles === 0) {
+    //    document.getElementById("carrito").innerHTML ="";
+   // }
 
     for (let i = 0; i < pord.length; i++) {
         let cartItem = pord[i];
@@ -21,7 +27,7 @@ function mostrarCart() {
                         <p>${cartItem.currency} <span class="datos1"> ${cartItem.unitCost}</span></p>
                     </td>
                     <td class="table__cantidad"><input type="number" min="1" onchange="cuentas('${cartItem.currency}')" value="${cartItem.count}">
-                    <button class="delete btn btn-danger">Eliminar</button>
+                    <button class="delete btn btn-danger" onclick="eliminar(${i})">Eliminar</button>
                     </td>
                
                 </tr>
@@ -30,6 +36,13 @@ function mostrarCart() {
     document.getElementById("carrito").innerHTML = addEndHTML;
     cuentas();
 }
+ 
+function eliminar(i) {
+    cartproducts.articles.splice(i, 1);
+    mostrarCart();
+    cuentas();
+}
+
 
 // Función para cálculo de total y sub-total (recuadro inferior)
 function cuentas(moneda) {
@@ -50,8 +63,19 @@ function cuentas(moneda) {
         subtotal += costo;
             cantItem += parseFloat(cantProductos[i].value);
     }
+    costoEnvio =0;
+    //let ninguno = true;
+    for (let x=0; x< envio.length; x++){
+        if (envio[x].checked){
+            costoEnvio = cantProductos * parseFloat(envio[x].value);
+            //ninguno = false;
+        }
+
+    }
+    
     document.getElementById("sumaSub").innerHTML = `Sub-Total: USD ${subtotal}`;
     document.getElementById("sumaTotal").innerHTML = `Total: UYU ${Math.round(subtotal * 40)}`;
+    document.getElementById('alerta').innerHTML=(costoEnvio).toFixed(2);
 }
 
 
@@ -65,4 +89,10 @@ document.addEventListener("DOMContentLoaded", function (e) {
         }
 
     });
+    for (let i=0; i< envio.length; i++){
+        envio[i].addEventListener('click',()=>{
+            cuentas();
+        })
+       
+    }
 });

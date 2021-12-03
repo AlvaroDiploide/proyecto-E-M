@@ -9,7 +9,7 @@ function showImagesGallery(array){
 
         htmlContentToAppend += `
         <div class="col-lg-3 col-md-4 col-6">
-            <div class="d-block mb-4 h-100">
+            <div class="d-block shadow mb-4 h-100">
                 <img class="img-fluid img-thumbnail" src="` + imageSrc + `" alt="">
             </div>
         </div>

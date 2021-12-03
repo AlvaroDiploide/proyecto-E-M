@@ -54,16 +54,16 @@ function showCategoriesList() {
            <div class="card  border-warning  mb-3 bg-light rounded" style="max-width: 120rem">
             <h4 class="card-title text-center shadow pt-2 text-dark">`+ category.name + `</h4>
 
-              <p class="text-dark shadow text-center">
-              <small>` + category.soldCount + ` articulos en stock</small>
+              <p class="text-dark shadow text-center"></p>
+              <p class="deslizar d-flex text-center">` + category.description + `</p>
               </p>
 
               <img src=` + category.imgSrc + ` alt="..">
               <br>
 
-              <p class="deslizar text-dark text-center shadow d-flex w-100 justify-content-between">` + category.description + `</p>
+              <p class=" text-dark text-center shadow w-100 justify-content-between">` + category.soldCount + ` articulos en stock</p>
 
-             <p class="text-center text-light bg-warning"> ${category.currency} ${category.cost } </p>
+             <p class="text-center text-dark bg-warning"> ${category.currency} ${category.cost } </p>
 
              <a href="product-info.html" class="text-center">
              <button class="btn btn-primary button">+ Información</button>

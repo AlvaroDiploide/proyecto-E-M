@@ -81,9 +81,9 @@ function mostrarProductos(array) {
         let relacionado= array[category.relatedProducts[i]];
 
         productosRelacionados +=`
-         <div class="card-body"><div>  
+         <div class="card-body shadow"><div>  
             <img class="img-fluid img-thumbnail" src=" ${relacionado.imgSrc}" alt="#" ></div>
-                <div class="relColor"> ${relacionado.currency} ${relacionado.cost}  <br> ${relacionado.name}
+                <div class="relColor shadow"> ${relacionado.currency} ${relacionado.cost}  <br> ${relacionado.name}
                      <br>
                 </div>
          </div>
