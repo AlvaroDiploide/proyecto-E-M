@@ -23,17 +23,17 @@
   <link href="css/dropzone.css" rel="stylesheet" />
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-1 bg-dark">
-    <div class="container-fluid site-header">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-1 bg-dark">
+      <div class="container-fluid site-header">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse justify-content-between flex" id="navbarSupportedContent">
+        <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
           <div class="nav-item">
             <a class="nav active py-2 d-md-inline-block" aria-current="page" href="home.html">Inicio</a>
           </div>
@@ -46,28 +46,29 @@
           <div class="nav-item">
             <a class="nav py-2  d-md-inline-block" href="sell.html">Vender</a>
           </div>
-          <!--Menú despegable con Boostrap-->
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
-              id="entrada"></a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
-              <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión<i
-                  class="fas fa-sign-out-alt"></i></a>
-            </div>
-        </ul>
-      </div>
-      <!--<div id="icon-menu">
-          <a class="dropdown-item" href="home.html"><i class="fas fa-bars"></i></a>
-        </div>-->
+
+        <!--Menú despegable con Boostrap-->
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle prueba" role="button" id="entrada" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" class="py-2 d-none d-md-inline-block" href="my-profile.html"
+            id="entrada"></a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="my-profile.html">Mi perfil<i class="fas fa-street-view"></i></a>
+            <span id="icon-menu">
+              <a class="dropdown-item" href="cart.html">Carrito</a></span>
+            <a class="dropdown-item" href="#" onclick="signOut();">Cerrar sesión
+              <i class="fas fa-sign-out-alt"></i></a>
+          </div>
     </div>
-  </nav>
+    <!--<div id="icon-menu">
+        <a class="dropdown-item" href="home.html"><i class="fas fa-bars"></i></a>
+      </div>-->
+  </div>
+</nav>
+    <br />
+    <br />
 
-  <br />
-  <br />
-
-  <!-- Tabla: Productos-->
+    <!-- Tabla: Productos-->
   <div>
     <table class="table table-dark table-striped">
       <thead>
@@ -199,10 +200,10 @@
                           </div>
                           <div class="modal-body text-dark">
                             <h6>Aceptamos:</h6>
-                            <img src="/public/img/Tarjeta visa.png" alt="#" borde-radius="10" width="70">
-                            <img src="/public/img/mastercard.png" alt="#" borde-radius="10" width="70">
-                            <img src="/public/img/paypal-.png" alt="#" borde-radius="10" width="70">
-                            <img src="/public/img/Creditel.png" alt="#" borde-radius="10" width="70">
+                            <img src="/img/Tarjeta visa.png" alt="#" borde-radius="10" width="70">
+                            <img src="/img/mastercard.png" alt="#" borde-radius="10" width="70">
+                            <img src="/img/paypal-.png" alt="#" borde-radius="10" width="70">
+                            <img src="/img/Creditel.png" alt="#" borde-radius="10" width="70">
                           </div>
 
                           <form class="was-validated row g-3 text-dark text-center">
@@ -273,7 +274,7 @@
 
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            <a href="/public/products.html"><button type="button" class="btn btn-primary">Finalizar
+                            <a href="products.html"><button type="button" class="btn btn-primary">Finalizar
                                 compra</button></a>
                           </div>
                         </div>
